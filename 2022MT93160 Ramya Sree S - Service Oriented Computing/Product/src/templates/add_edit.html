@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h1>{% if product %}Edit Product{% else %}Add Product{% endif %}</h1>
+    <form method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="{{ product.title if product else '' }}"><br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" value="{{ product.author if product else '' }}"><br>
+        <label for="price">Price:</label>
+        <input type="text" name="price" value="{{ product.price if product else '' }}"><br>
+        <input type="submit" value="{% if product %}Update{% else %}Add{% endif %}">
+    </form>
+    <a href="/">Back to Product List</a>
+</body>
+</html>

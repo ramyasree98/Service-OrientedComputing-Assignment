@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {background-color: #c5bddb;}
+    </style>
+</head>
+<body>
+
+    <h1>Book Store</h1>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product[1]  }}</td>
+            <td>{{ product[2]  }}</td>
+            <td>{{ product[3]  }}</td>
+            <td><a href="/edit_product/{{ product.id }}">Edit</a></td>
+            <td><a href="/delete_product/{{ product.id  }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+    <a href="/add_edit/0">Add Product</a>
+
+    
+
+</body>
+</html>

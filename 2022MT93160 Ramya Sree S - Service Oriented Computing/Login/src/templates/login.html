@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Ramya Sree S - SOC Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .login-form {
+            display: inline-block;
+            text-align: left;
+            margin: 20px;
+            border: 1px solid;
+            padding: 20px;
+            border-radius: 5px;
+            color: #480d61;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="login-form"> 
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Login">
+            </form>
+            <p><a href="/forgot_password">Forgot Password?</a></p>
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</head>
+</html>

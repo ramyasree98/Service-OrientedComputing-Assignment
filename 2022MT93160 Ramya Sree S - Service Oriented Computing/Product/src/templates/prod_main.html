@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #a597c9;
+        }
+
+        .welcome-message {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {background-color: #c5bddb;}
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="welcome-message">Ramya's Book-Store Welcomes You!</div>
+    </div>
+
+    <h1>Order Your Book from 'The Book Store'</h1>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Check Out</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product[1]  }}</td>
+            <td>{{ product[2]  }}</td>
+            <td>{{ product[3]  }}</td>
+            <td><button id="orderButton" onclick="showOrderAlert()">Order Now</button>
+
+            <script>
+            function showOrderAlert() {
+              alert('Thanks for ordering!');
+            }
+            </script></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    
+
+</body>
+</html>

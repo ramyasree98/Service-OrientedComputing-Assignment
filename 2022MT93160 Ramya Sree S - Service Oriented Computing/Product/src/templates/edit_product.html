@@ -1,0 +1,17 @@
+ mko97ybv<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<body>
+
+    <h1>Edit Product</h1>
+    <form method="post">
+        <input type="text" name="title" value="{{ product.title }}" placeholder="Title"><br><br>
+        <input type="text" name="author" value="{{ product.author }}" placeholder="Author"><br><br>
+        <input type="number" name="price" value="{{ product.price }}" placeholder="Price"><br><br>
+        <input type="submit" value="Update Product">
+    </form>
+
